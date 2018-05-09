@@ -1,7 +1,14 @@
 import React from 'react';
 
 const validation = (props) => {
-  return <p>{props.inputTextlength}</p>
+
+  const threshold = 5;
+
+  const validateInputLength = (length) => {
+    return length <= threshold ? 'Text too short' : 'Text long enough'
+  }
+
+  return <p>{validateInputLength(props.inputTextlength)}</p>
 }
 
 export default validation;
