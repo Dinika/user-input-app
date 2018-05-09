@@ -8,7 +8,7 @@ const validation = (props) => {
     return length <= threshold ? 'Text too short' : 'Text long enough'
   }
 
-  return <p>{validateInputLength(props.inputTextlength)}</p>
+  return <p class="validation-text">{validateInputLength(props.inputTextlength)}</p>
 }
 
 export default validation;
